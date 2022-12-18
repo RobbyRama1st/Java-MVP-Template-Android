@@ -1,10 +1,9 @@
-package com.sweet.cloves.mvptemplate.di.component;
+package com.sweet.cloves.mvptemplate.di.app;
 
 import android.content.Context;
 
 import com.sweet.cloves.mvptemplate.MyApp;
-import com.sweet.cloves.mvptemplate.di.module.AppModule;
-import com.sweet.cloves.mvptemplate.di.module.NetworkModule;
+import com.sweet.cloves.mvptemplate.data.AppRepository;
 
 import javax.inject.Singleton;
 
@@ -13,6 +12,7 @@ import dagger.Component;
 @Singleton
 @Component(modules = {AppModule.class, NetworkModule.class})
 public interface AppComponent {
-    Context getAppContext();
+    Context getContext();
     MyApp getMyApp();
+    AppRepository getAppRepository();
 }

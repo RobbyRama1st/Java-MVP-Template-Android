@@ -8,7 +8,7 @@ import androidx.loader.content.Loader;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sweet.cloves.mvptemplate.MyApp;
-import com.sweet.cloves.mvptemplate.di.component.AppComponent;
+import com.sweet.cloves.mvptemplate.di.app.AppComponent;
 import com.sweet.cloves.mvptemplate.presentation.base.BasePresenter;
 import com.sweet.cloves.mvptemplate.presentation.base.PresenterFactory;
 import com.sweet.cloves.mvptemplate.presentation.base.PresenterLoader;

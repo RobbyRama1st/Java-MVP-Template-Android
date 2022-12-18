@@ -4,9 +4,9 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 
-import com.sweet.cloves.mvptemplate.di.component.AppComponent;
-import com.sweet.cloves.mvptemplate.di.component.DaggerAppComponent;
-import com.sweet.cloves.mvptemplate.di.module.AppModule;
+import com.sweet.cloves.mvptemplate.di.app.AppComponent;
+import com.sweet.cloves.mvptemplate.di.app.AppModule;
+import com.sweet.cloves.mvptemplate.di.app.DaggerAppComponent;
 
 public class MyApp extends Application {
 

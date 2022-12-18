@@ -1,4 +1,4 @@
-package com.sweet.cloves.mvptemplate.di.scope;
+package com.sweet.cloves.mvptemplate.di;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

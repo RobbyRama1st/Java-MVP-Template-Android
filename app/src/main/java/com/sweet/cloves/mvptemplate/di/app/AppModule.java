@@ -1,4 +1,4 @@
-package com.sweet.cloves.mvptemplate.di.module;
+package com.sweet.cloves.mvptemplate.di.app;
 
 import android.content.Context;
 

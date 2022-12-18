@@ -1,4 +1,4 @@
-package com.sweet.cloves.mvptemplate.data.remote.model;
+package com.sweet.cloves.mvptemplate.data.remote.response;
 
 import com.google.gson.annotations.SerializedName;
 

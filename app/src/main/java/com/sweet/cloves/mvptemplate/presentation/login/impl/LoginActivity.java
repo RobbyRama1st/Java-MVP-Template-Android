@@ -2,7 +2,7 @@ package com.sweet.cloves.mvptemplate.presentation.login.impl;
 
 import androidx.annotation.NonNull;
 
-import com.sweet.cloves.mvptemplate.di.component.AppComponent;
+import com.sweet.cloves.mvptemplate.di.app.AppComponent;
 import com.sweet.cloves.mvptemplate.presentation.login.LoginPresenter;
 import com.sweet.cloves.mvptemplate.presentation.login.LoginView;
 import com.sweet.cloves.mvptemplate.presentation.base.PresenterFactory;

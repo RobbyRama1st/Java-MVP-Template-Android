@@ -6,8 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 
 import com.sweet.cloves.mvptemplate.R;
-import com.sweet.cloves.mvptemplate.di.component.AppComponent;
-import com.sweet.cloves.mvptemplate.di.component.SplashViewComponent;
+import com.sweet.cloves.mvptemplate.di.app.AppComponent;
+import com.sweet.cloves.mvptemplate.di.splash.SplashComponent;
 import com.sweet.cloves.mvptemplate.presentation.base.PresenterFactory;
 import com.sweet.cloves.mvptemplate.presentation.splash.SplashPresenter;
 import com.sweet.cloves.mvptemplate.presentation.splash.SplashView;
@@ -17,7 +17,7 @@ import com.sweet.cloves.mvptemplate.presentation.base.impl.BaseActivity;
 public class SplashActivity extends BaseActivity<SplashPresenter, SplashView> implements SplashView {
 
     PresenterFactory<SplashPresenter> presenterFactory;
-    SplashViewComponent splashViewComponent;
+    SplashComponent splashViewComponent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
