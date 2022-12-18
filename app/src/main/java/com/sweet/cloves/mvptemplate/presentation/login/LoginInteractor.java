@@ -6,7 +6,7 @@ public interface LoginInteractor extends BaseInteractor {
 
     void login(String email, String password, ValidatorInputListener validatorInputListener, OnFinishedLoginListener onFinishedoginListener);
 
-    interface ValidatorInputListener{
+    interface ValidatorInputListener {
 
     }
 

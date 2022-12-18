@@ -1,8 +1,8 @@
-package com.sweet.cloves.mvptemplate.data.model;
+package com.sweet.cloves.mvptemplate.data.remote.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Users {
+public class ResultUsers {
 
     @SerializedName("name")
     String name;

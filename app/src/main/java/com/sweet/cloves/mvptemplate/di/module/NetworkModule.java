@@ -2,6 +2,8 @@ package com.sweet.cloves.mvptemplate.di.module;
 
 import androidx.annotation.NonNull;
 
+import com.sweet.cloves.mvptemplate.data.AppRepository;
+import com.sweet.cloves.mvptemplate.data.AppRepositoryImpl;
 import com.sweet.cloves.mvptemplate.utils.Constant;
 
 import java.util.concurrent.TimeUnit;
@@ -13,6 +15,7 @@ import dagger.hilt.components.SingletonComponent;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
@@ -41,7 +44,13 @@ public final class NetworkModule {
         return new Retrofit.Builder()
                 .baseUrl(Constant.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .client(okHttpClient)
                 .build();
+    }
+
+    @Provides
+    public AppRepository provideApiSource(Retrofit retrofit) {
+        return new AppRepositoryImpl(retrofit);
     }
 }

@@ -24,7 +24,7 @@ public class LoginPresenterImpl implements LoginPresenter {
 
     @Override
     public void onViewAttached(@NonNull LoginView view) {
-
+        loginView = view;
     }
 
     @Override
