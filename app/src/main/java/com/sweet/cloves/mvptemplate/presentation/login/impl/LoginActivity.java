@@ -1,26 +1,50 @@
 package com.sweet.cloves.mvptemplate.presentation.login.impl;
 
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 
+import com.sweet.cloves.mvptemplate.R;
 import com.sweet.cloves.mvptemplate.di.app.AppComponent;
+import com.sweet.cloves.mvptemplate.di.login.DaggerLoginComponent;
+import com.sweet.cloves.mvptemplate.di.login.LoginModule;
 import com.sweet.cloves.mvptemplate.presentation.login.LoginPresenter;
 import com.sweet.cloves.mvptemplate.presentation.login.LoginView;
 import com.sweet.cloves.mvptemplate.presentation.base.PresenterFactory;
 import com.sweet.cloves.mvptemplate.presentation.base.impl.BaseActivity;
 
-public class LoginActivity extends BaseActivity<LoginPresenter, LoginView> implements LoginView{
+public class LoginActivity extends BaseActivity<LoginPresenter, LoginView> implements LoginView {
 
-    PresenterFactory<LoginPresenter> presenterFactory;
+    LoginPresenter mLoginPresenter;
 
-    @NonNull
+    private EditText mEmailEditText;
+    private EditText mPasswordEditText;
+    private Button mLoginButton;
+    private TextView mForgotPasswordTextView;
+    private TextView mSignUpTextView;
+
     @Override
-    protected PresenterFactory<LoginPresenter> getPresenterFactory() {
-        return presenterFactory;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
     }
 
     @Override
     protected void setupComponent(@NonNull AppComponent appComponent) {
+        DaggerLoginComponent.builder()
+                .appComponent(appComponent)
+                .loginModule(new LoginModule())
+                .build()
+                .inject(this);
+    }
 
+    @NonNull
+    @Override
+    protected PresenterFactory<LoginPresenter> getPresenterFactory() {
+        return () -> mLoginPresenter;
     }
 
     @Override
@@ -29,7 +53,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginView> imple
     }
 
     @Override
-    public void loginFailure(String message) {
+    public void loginFailed(String message) {
 
     }
 
@@ -48,10 +72,6 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginView> imple
 
     }
 
-    @Override
-    public void openActivityOnTokenExpire() {
-
-    }
 
     @Override
     public void onError(int resId) {
@@ -65,21 +85,22 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginView> imple
 
     @Override
     public void showMessage(String message) {
-
+        // Show a message
     }
 
     @Override
     public void showMessage(int resId) {
-
+        // Show a message
     }
 
     @Override
     public boolean isNetworkConnected() {
+        // Check if the device is connected to the internet
         return false;
     }
 
     @Override
     public void hideKeyboard() {
-
+        // Hide the keyboard
     }
 }

@@ -6,7 +6,6 @@ public interface BaseView {
     void showLoading(String msg);
     void hideLoading();
     void onCompleted();
-    void openActivityOnTokenExpire();
     void onError(@StringRes int resId);
     void onError(String message);
     void showMessage(String message);

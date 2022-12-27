@@ -6,7 +6,10 @@ import java.util.List;
 
 public class LoginResponse extends BaseResponse {
 
+    public boolean isSuccess() {
+        return !isError();
+    }
+
     @SerializedName("data")
     private List<LoginResult> data;
-
 }

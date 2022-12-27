@@ -16,7 +16,9 @@
         android:theme="@style/Theme.MVPTemplate"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.main.impl.MainActivity"
+            android:name=".presentation.login.impl.LoginActivity"/>
+        <activity
+            android:name=".presentation.splash.impl.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

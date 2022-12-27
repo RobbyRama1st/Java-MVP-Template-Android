@@ -37,7 +37,7 @@ public class SplashActivity extends BaseActivity<SplashPresenter, SplashView> im
     }
 
     @Override
-    public void goToLogin() {
+    public void toNextActivity() {
 
     }
 }
