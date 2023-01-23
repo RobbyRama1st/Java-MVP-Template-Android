@@ -1,3 +1,3 @@
 # mvp-android
 
-A Template MVP Aplication with java
+A Template MVP Application with java
